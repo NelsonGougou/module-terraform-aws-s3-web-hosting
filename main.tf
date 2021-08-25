@@ -8,7 +8,4 @@ resource "aws_s3_bucket" "s3_bucket" {
         error_document = "error.html"
     }
 
-    provisioner "local-exec" {
-    command = "aws s3 cp ${path.module}/website/index.html s3://${var.bucket_name}"
-  }
 }
